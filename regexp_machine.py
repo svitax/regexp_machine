@@ -55,3 +55,15 @@ a = char('a')
 # a.test('a') # True
 # a.test('b') # False
 
+# The "empty" string
+EPSILON = 'ε'
+
+
+# Factory functionn for an epsilon machine
+def epsilon():
+    return char(EPSILON)
+
+
+e = epsilon()
+# e.test('') # true
+# e.test('a') # false
