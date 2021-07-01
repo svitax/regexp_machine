@@ -1,8 +1,7 @@
-# FA State Class
-
 from collections import defaultdict
 
 
+# FA State Class
 class State:
     def __init__(self, accepting=False):
         self.accepting = accepting
@@ -13,6 +12,11 @@ class State:
 
     def getTransitionsForSymbol(self, symbol):
         return {symbol: self.transitionMap[symbol]}
+
+    def test(self, string):
+        # Need to implement
+        string = string
+        return None
 
 
 s1 = State(False)
