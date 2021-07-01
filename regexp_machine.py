@@ -40,3 +40,18 @@ class NFA:
         return self.inState.test(string)
 
 
+# Factory function for a single character machinne
+def char(symbol):
+    inState = State()
+    outState = State()
+
+    outState.accepting = True
+    inState.addTransitionForSymbol(symbol, outState)
+
+    return NFA(inState, outState)
+
+
+a = char('a')
+# a.test('a') # True
+# a.test('b') # False
+
