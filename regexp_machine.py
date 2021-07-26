@@ -23,9 +23,9 @@ s1 = State(False)
 s2 = State(True)
 s3 = State(False)
 
-s1.addTransitionForSymbol('a', s2)
-s1.addTransitionForSymbol('a', s3)
-print(s1.getTransitionsForSymbol('a'))  # {a: [s2, s3]}
+s1.addTransitionForSymbol("a", s2)
+s1.addTransitionForSymbol("a", s3)
+print(s1.getTransitionsForSymbol("a"))  # {a: [s2, s3]}
 
 
 # NFA State Class
@@ -51,12 +51,12 @@ def char(symbol):
     return NFA(inState, outState)
 
 
-a = char('a')
+a = char("a")
 # a.test('a') # True
 # a.test('b') # False
 
 # The "empty" string
-EPSILON = 'ε'
+EPSILON = "ε"
 
 
 # Factory functionn for an epsilon machine
